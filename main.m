@@ -8,7 +8,7 @@ KinovaGen3_DH;
 % joint angles
 q = [0;0;0;0;0;0;0];
 
-T_B_n = FwdKin(DH,q);
+T_B_n = FwdKin(modDH,q);
 
 % construct triads for plotting
 trds = 0.02*eye(3);
@@ -38,5 +38,5 @@ grid on;
 xlabel('x [m]');
 ylabel('y [m]');
 zlabel('z [m]');
-axis tight;
+% axis tight;
 % axis([-0.2 0.2 -0.2 0.2 0 1.3]);

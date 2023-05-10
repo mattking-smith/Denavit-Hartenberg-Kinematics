@@ -11,6 +11,13 @@ if strcmp(DH.param,'DH')
         end
         T_B_n(:,:,ii+1) = T_B_n(:,:,ii)*T_nm1_n;
     end
+elseif strcmp(DH.param,'modDH')
+    for ii = 1:1:numel(DH.a)
+        T_nm1_n = HomTrans(DH.d(ii), DH.a(ii), DH.alpha(ii), q(ii),'modDH');
+        T_B_n(:,:,ii+1) = T_B_n(:,:,ii)*T_nm1_n;
+    end
+else
+    error('Input incorrect parameterization (neither DH or modDH)');
 end
 
 end
