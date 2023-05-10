@@ -1,5 +1,5 @@
 % DH table for Kinova Gen3
-% Table found at following source https://www.kinovarobotics.com/uploads/User-Guide-Gen3-R07.pdf
+% Table found on page 205 of Kinova-Gen-3_User-Guide.pdf
 DH.alpha(1) = pi;
 DH.alpha(2) = pi/2;
 DH.alpha(3) = pi/2;
