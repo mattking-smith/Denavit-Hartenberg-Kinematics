@@ -1,7 +1,0 @@
-% Script for reading in DH table and computing forward kinemitics
-clear all;
-close all;
-
-% Load DH table
-KinovaGen3_DH;
-
