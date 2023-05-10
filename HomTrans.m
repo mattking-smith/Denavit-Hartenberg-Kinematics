@@ -7,8 +7,8 @@ Parameters:
 @alpha: angle about common normal, from old z axis to new z axis (radians)
 @theta: angle about previous z, from old x to new x (radians)
 @param: parameterization of kinematics
-@T_nm1_n: Homogeneous transformation from concurrent coordinate system n,
-to the previous coordinate system n-1 (nm1)
+@T_nm1_n: Homogeneous transformation to coordinate system n,
+from the previous coordinate system n-1 (nm1)
 %}
 if strcmp(param, 'DH')
     T_nm1_n = ...
@@ -16,6 +16,7 @@ if strcmp(param, 'DH')
      sin(theta) cos(theta)*cos(alpha)   -cos(theta)*sin(alpha)  a*sin(theta);
      0          sin(alpha)              cos(alpha)              d;
      0          0                       0                       1];
+ 
 elseif strcmp(param, 'modDH')
     T_nm1_n = ...
     [cos(theta)             -sin(theta)             0           a;
