@@ -9,7 +9,10 @@ addpath('../functions');
 KinovaGen3_DH;
 
 % joint angles
-q = [0;0;0;0;0;0;0];
+q = [pi;pi/4;pi/6;-pi/6;-pi/4;-pi/2;-pi];
+
+% joint velocities
+qdot = 0.1*ones(7,1);
 
 T_B_n = FwdKin(modDH,q);
 
@@ -22,6 +25,13 @@ set(fig1,'Name','Kinova Kinematics');
 daspect([1 1 1]);
 view([60,10]);
 t_prev = [0;0;0];
+
+% plot base frame
+for kk = 1:3
+    line([0, trds(1,kk)],[0, trds(2,kk)],[0, trds(3,kk)],'color',clrs{kk},'linewidth',2);
+end
+
+% plot manipulator frames
 for ii = 1:1:size(T_B_n,3)
     R_B_n = T_B_n(1:3,1:3,ii);
     t = T_B_n(1:3,4,ii);
@@ -41,5 +51,9 @@ grid on;
 xlabel('x [m]');
 ylabel('y [m]');
 zlabel('z [m]');
-% axis tight;
-% axis([-0.2 0.2 -0.2 0.2 0 1.3]);
+
+% Compute Geometric Jacobian
+J = GeometricJacobian(T_B_n);
+
+
+
