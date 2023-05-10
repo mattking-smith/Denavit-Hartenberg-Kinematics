@@ -55,5 +55,8 @@ zlabel('z [m]');
 % Compute Geometric Jacobian
 J = GeometricJacobian(T_B_n);
 
-
-
+% Linear and angular velocities per link in work/configuration space
+for kk = 1:1:size(J,3)
+    link(kk).LinVel = J(1:3,:,kk)*qdot;
+    link(kk).AngVel = J(4:6,:,kk)*qdot;
+end
