@@ -2,6 +2,9 @@
 clear all;
 close all;
 
+% Add in functions
+addpath('../functions');
+
 % Load DH table
 KinovaGen3_DH;
 
