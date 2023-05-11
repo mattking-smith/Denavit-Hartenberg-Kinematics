@@ -10,6 +10,6 @@ for ii = 1:1:dof
         J(:,jj,ii) = [cross(z_jj, p_ii-p_jj);z_jj];
     end
 end
-
+J = J(:,1:dof-1,:);
 end
 
