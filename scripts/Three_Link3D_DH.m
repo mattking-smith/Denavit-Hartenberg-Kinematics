@@ -1,4 +1,4 @@
-% Planar 2 link manipulator
+% 3 link 3D manipulator
 DH.alpha(1:3) = [-0.4, 0.7, 0.9];
 
 DH.a(1:3) = [3.6, 9.8, -10.2];
