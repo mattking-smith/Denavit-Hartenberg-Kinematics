@@ -1,4 +1,4 @@
-# Repository to Verify Forward Kinematics of Devanit-Hartenberg
+# Repository to Verify Forward Kinematics of Devanit-Hartenberg Parameterization
 The <em>manipulator</em>_main.m scripts (in the [scripts folder](scripts/)) computes and plot the forward kinematics (defined in [`FwdKin.m`](functions/FwdKin.m)) from the Devanit-Hartenberg (DH) parameters of the manipulator.
 
 ## Kinova Gen3 Manipulator Specifics
