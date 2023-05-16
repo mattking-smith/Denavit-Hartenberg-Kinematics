@@ -20,6 +20,7 @@ DH.d(6) = - (0.2084 + 0.1059);
 DH.d(7) = 0;
 DH.d(8) = - (0.1059 + 0.0615);
 
+DH.manipulator = 'KinovaGen3';
 % Must add pi to some of the joint angles for this convention
 DH.theta(1) = 0;
 DH.theta(2) = 0;
@@ -27,6 +28,7 @@ DH.theta(3:8) = pi;
 DH.param = 'DH';
 
 % Modified DH table
+modDH.manipulator = 'KinovaGen3';
 modDH.param = 'modDH';
 modDH.a(1:7) = 0;
 
